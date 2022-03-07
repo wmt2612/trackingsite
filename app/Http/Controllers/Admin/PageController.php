@@ -43,7 +43,7 @@ class PageController extends Controller
 
     public function updateSettings(Request $request)
     {
-        $keys = $request->only(['smtp_email', 'smtp_password', 'mail_to', 'mail_to_subject']);
+        $keys = $request->only(['smtp_email', 'smtp_password', 'mail_to', 'mail_to_subject','mail_content']);
         foreach($keys as $key => $value) {
             Setting::updateOrCreate(
                 ['key' => $key],

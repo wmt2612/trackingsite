@@ -61,6 +61,12 @@
                                                                placeholder="Mail to subject" value="{{ setting('mail_to_subject') }}"/>
                                                         </div>
                                                     </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Mail Content</label>
+                                                        <div>
+                                                            <textarea type="text" name="mail_content" rows="6" class="form-control" required>{{ setting('mail_content') }}</textarea>
+                                                        </div>
+                                                    </div>
                                                     <div>
                                                         <div>
                                                             <button type="submit"
