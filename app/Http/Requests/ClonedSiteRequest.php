@@ -25,6 +25,7 @@ class ClonedSiteRequest extends FormRequest
     {
         return [
             'site_name' => 'string | required',
+            'ip_address' => 'string | required'
         ];
     }
 }

@@ -15,5 +15,7 @@ class ClonedWebsite extends Model
     protected $fillable = [
         'site_name',
         'status',
+        'ip_address',
+        'alert_message'
     ];
 }

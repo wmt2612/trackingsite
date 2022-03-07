@@ -14,8 +14,9 @@ class ClonedWebsiteFactory extends Factory
     public function definition()
     {
         return [
-            'site_name' => 'https://cloned.com',
+            'site_name' => 'https://hacker.com',
             'status' => rand(0, 1),
+            'ip_address' => $this->faker->ipv4(),
         ];
     }
 }

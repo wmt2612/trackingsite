@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClonedWebsitesTable extends Migration
+class CreateSettingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateClonedWebsitesTable extends Migration
      */
     public function up()
     {
-        Schema::create('cloned_websites', function (Blueprint $table) {
+        Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->string('site_name');
-            $table->boolean('status');
-            $table->string('ip_address');
-            $table->text('alert_message')->nullable();
-            $table->softDeletes();
+            $table->string('key')->unique();
+            $table->string('value');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateClonedWebsitesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cloned_websites');
+        Schema::dropIfExists('settings');
     }
 }
