@@ -16,7 +16,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-Route::middleware('auth')->group(function() {
+Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('cloned-websites', [PageController::class, 'clonedWebsites'])->name('cloned_websites');
     Route::get('update-cloned-website/{id}', [PageController::class, 'updateClonedWebsites'])->name('update_site');
