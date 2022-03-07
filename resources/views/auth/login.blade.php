@@ -33,15 +33,14 @@
                             <div class="">
                                 <div class="text-center">
                                     <a href="index.html" class="">
-                                        <img src="assets/images/logo-dark.png" alt="" height="24"
+                                        <img src="https://webmaster.com.vn/themes/webmaster/assets/public/images/logo/logo.svg?v=2.0.7" alt="" height="45"
                                             class="auth-logo logo-dark mx-auto">
-                                        <img src="assets/images/logo-light.png" alt="" height="24"
+                                        <img src="https://webmaster.com.vn/themes/webmaster/assets/public/images/logo/logo.svg?v=2.0.7" alt="" height="45"
                                             class="auth-logo logo-light mx-auto">
                                     </a>
                                 </div>
                                 <!-- end row -->
                                 <h4 class="font-size-18 text-muted mt-2 text-center">Welcome Back !</h4>
-                                <p class="mb-5 text-center">Sign in to continue to Upzet.</p>
                                 <form class="form-horizontal" action="{{ route('post_login') }}" method="POST">
                                     @csrf
                                     <div class="row">
