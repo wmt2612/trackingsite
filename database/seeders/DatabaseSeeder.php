@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         DB::table('users')->truncate();
-        // DB::table('cloned_websites')->truncate();
+        DB::table('cloned_websites')->truncate();
         // \App\Models\User::factory(10)->create();
         // ClonedWebsite::factory(100)->create();
         User::factory()->createOne([
