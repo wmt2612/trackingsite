@@ -52,4 +52,6 @@ class PageController extends Controller
         }
         return back()->withSuccess('Update setting successfully !!');
     }
+
+   
 }

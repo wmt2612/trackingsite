@@ -24,6 +24,16 @@
                     </a>
                 </li>
                 <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-apps-fill"></i>
+                        <span>Tools</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('tools.sha1') }}">Sha1</a></li>
+                        <li><a href="{{ route('tools.base64') }}">Base64</a></li>
+                    </ul>
+                </li>
+                <li>
                     <a href="{{ route('settings') }}" class=" waves-effect">
                         <i class="dripicons-gear "></i>
                         <span>Settings</span>
