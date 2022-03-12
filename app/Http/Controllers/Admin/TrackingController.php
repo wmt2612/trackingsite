@@ -17,17 +17,20 @@ use Illuminate\Support\Facades\RateLimiter;
 class TrackingController extends Controller
 {
     protected $site = '';
+    protected $timeCache = 30;
+    protected $numberRequest = 3;
+    protected $timeRequest = 30;
     public function trackingClonedSite(ClonedSiteRequest $request)
     {
         $excute = RateLimiter::attempt(
             'get-site:'.$request->ip_address,
-            $perTenMinutesRequest = 3,
+            $perTenMinutesRequest = $this->numberRequest,
             function () use ($request) {
-                $this->site = Cache::remember('site:'.$request->ip_address, 60 * 10, function () use ($request) {
+                $this->site = Cache::remember('site:'.$request->ip_address, 60 * $this->timeCache, function () use ($request) {
                     return ClonedWebsite::whereSiteName($request->site_name)->whereIpAddress($request->ip_address)->first();
                 });
             },
-            $seconds = 60*10
+            $seconds = 60 * $this->timeRequest
         );
         if (!$excute) {
             return response()->json([
