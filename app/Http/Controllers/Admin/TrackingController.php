@@ -52,7 +52,7 @@ class TrackingController extends Controller
             if($this->site !== '') {
                 return response()->json([
                     'status' => $this->site->status === ClonedWebsiteStatus::Active ? 'active' : 'deactive',
-                    'message' => $this->site->alert_message,
+                    'message' => $this->site->alert_message ?? 'Blocked by Webmaster Vietnam!',
                 ], 200);
             }
             return response()->json([
