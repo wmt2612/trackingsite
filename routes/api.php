@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\TrackingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,4 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::middleware('guest')->prefix('v1')->name('v1.')->group(function() {
     Route::post('tracking-cloned-site', [TrackingController::class, 'trackingClonedSite']);
+    Route::post('products', [ProductController::class, 'save']);
 });

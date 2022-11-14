@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ToolController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -28,6 +29,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         Route::get('sha1', [ToolController::class, 'toolSha1'])->name('sha1');
         Route::get('base64', [ToolController::class, 'toolBase64'])->name('base64');
     });
+    Route::get('/products', [ProductController::class, 'index'])->name('product.index');
 });
 Route::get('/login', [DashboardController::class, 'login'])->name('login');
 Route::post('/login', [DashboardController::class, 'postLogin'])->name('post_login');

@@ -23,6 +23,14 @@
                         <span>Cloned Websites</span>
                     </a>
                 </li>
+
+                <li>
+                    <a href="{{ route('product.index') }}" class=" waves-effect">
+                        <i class="mdi mdi-calendar-outline"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-apps-fill"></i>
