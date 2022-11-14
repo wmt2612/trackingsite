@@ -5,19 +5,19 @@
             <div class="navbar-brand-box text-center">
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="https://webmasters.com.vn/wp-content/uploads/2020/10/cropped-Logo_4-ver2.png" alt="logo-sm-dark" height="22">
+                        <img src="{{ asset('assets/images/logo_webmaster.png') }}" alt="logo-sm-dark" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="https://webmasters.com.vn/wp-content/uploads/2020/10/cropped-Logo_4-ver2.png" alt="logo-dark" height="24">
+                        <img src="{{ asset('assets/images/logo_webmaster.png') }}" alt="logo-dark" height="24">
                     </span>
                 </a>
 
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="https://webmasters.com.vn/wp-content/uploads/2020/10/cropped-Logo_4-ver2.png" alt="logo-sm-light" height="50">
+                        <img src="{{ asset('assets/images/logo_webmaster.png') }}" alt="logo-sm-light" height="40">
                     </span>
                     <span class="logo-lg">
-                        <img src="https://webmasters.com.vn/wp-content/uploads/2020/10/cropped-Logo_4-ver2.png" alt="logo-light" height="50">
+                        <img src="{{ asset('assets/images/logo_webmaster.png') }}" alt="logo-light" height="40">
                     </span>
                 </a>
             </div>
